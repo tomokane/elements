@@ -1,5 +1,5 @@
 /*---------------------------------------------------
-		LESS Elements 0.4
+		LESS Elements 0.5
 	---------------------------------------------------
 		A set of useful LESS mixins by Dmitry Fadeyev
 		Special thanks for mixin suggestions to:
@@ -10,6 +10,17 @@
 		More info at: http://lesselements.com
 -----------------------------------------------------*/
 
+.gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+	background: @color;
+	background: -webkit-gradient(linear,
+	    												 left bottom,
+	    												 left top,
+	    												 @start,
+	    												 @stop);
+	background: -moz-linear-gradient(center bottom,
+	    														 @start 0%,
+	    														 @stop 100%);
+}
 .bw-gradient(@color: #F5F5F5, @start: 0, @stop: 255) {
 	background: @color;
 	background: -webkit-gradient(linear,
@@ -42,10 +53,10 @@
 	-webkit-border-bottom-right-radius: @bottomright;
 	-webkit-border-bottom-left-radius: @bottomleft;
 	-webkit-border-top-left-radius: @topleft;
-	-moz-border-top-right-radius: @topright;
-	-moz-border-bottom-right-radius: @bottomright;
-	-moz-border-bottom-left-radius: @bottomleft;
-	-moz-border-top-left-radius: @topleft;
+	-moz-border-radius-topright: @topright;
+	-moz-border-radius-bottomright: @bottomright;
+	-moz-border-radius-bottomleft: @bottomleft;
+	-moz-border-radius-topleft: @topleft;
 	border-top-right-radius: @topright;
 	border-bottom-right-radius: @bottomright;
 	border-bottom-left-radius: @bottomleft;
