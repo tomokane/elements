@@ -1,11 +1,12 @@
 /*---------------------------------------------------
-    LESS Elements 0.5
+    LESS Elements 0.6
   ---------------------------------------------------
     A set of useful LESS mixins by Dmitry Fadeyev
     Special thanks for mixin suggestions to:
       Kris Van Herzeele,
       Benoit Adam,
-      Portenart Emile-Victor
+      Portenart Emile-Victor,
+      Ryan Faerman
 
     More info at: http://lesselements.com
 -----------------------------------------------------*/
@@ -117,4 +118,11 @@
   column-rule-color: @columnRuleColor;
   column-rule-style: @columnRuleStyle;
   column-rule-width: @columnRuleWidth;
+}
+.translate(@x:0, @y:0) {
+	-moz-transform: translate(@x, @y);
+	-webkit-transform: translate(@x, @y);
+	-o-transform: translate(@x, @y);
+	-ms-transform: translate(@x, @y);
+	transform: translate(@x, @y);
 }
